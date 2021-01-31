@@ -1,3 +1,6 @@
+<% if user_signed_in? %> <%# この行を追加する %>
+  <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
+<% end %> <%# この行を追加する %>
 <div id="home" class= "big-bg">
 <div class="home-content wrapper">
   <h2 class="page-title">We'll Make Your Day</h2>
