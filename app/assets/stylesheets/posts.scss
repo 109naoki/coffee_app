@@ -13,7 +13,7 @@ a {
 
 .wrapper {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0px auto;
   padding: 0 4%;
 }
 
@@ -22,18 +22,19 @@ a {
 
   p {
     font-size: 1.125rem;
-    margin: 20px 0 42px;
+    margin: 120px 0 42px;
     color: white;
   }
 
   h2 {
-    color: white;
+    color:#fff
+
   }
 }
 
 .big-bg {
   background-image: image-url('cafe.png');
-  height: 350px;
+  height: 450px;
   background-repeat: no-repeat, repeat;
   text-align: center;
   background-size: cover;
