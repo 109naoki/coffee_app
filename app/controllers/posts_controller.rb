@@ -5,4 +5,7 @@ class PostsController < ApplicationController
   end
   # ==========ここまで追加する==========
 
+  def show
+    @post = Post.find(params[:id])
+  end
 end
