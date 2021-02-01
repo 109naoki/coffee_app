@@ -14,6 +14,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
 gem 'devise'
+gem 'pry-rails'
 gem 'omniauth', '1.9.1'
 gem 'omniauth-twitter'
 # Use mysql as the database for Active Record

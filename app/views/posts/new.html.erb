@@ -1,0 +1,10 @@
+<%= form_with model: @post do |f| %>
+  <%= f.label :caption, "商品名" %>
+  <%= f.text_field :caption %>
+  <%= f.label :profile, "感想" %>
+  <%= f.text_field :description%>
+  <%= f.label :image, "プロフィール画像" %><br>
+  <%= f.file_field :image %>
+
+  <%= f.submit "投稿", class: "btn btn-info" %>
+<% end %>
