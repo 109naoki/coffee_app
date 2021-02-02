@@ -1,11 +1,13 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
   mount_uploader :avatar, AvatarUploader
   has_many :posts, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,:omniauthable
-         end
+  validates :name, presence: true
+  end
 #      def self.find_for_oauth(auth)
 #     user = User.where(uid: auth.uid, provider: auth.provider).first
 

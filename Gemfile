@@ -12,6 +12,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.4.1'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'jquery-rails'
 gem 'devise'
 gem 'pry-rails'

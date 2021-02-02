@@ -1,0 +1,21 @@
+<div class="row">
+<% @post.each do |post| %>
+  <div class="card mb-4 shadow-sm">
+
+    <%= image_tag post.image_url.to_s, class: "frame" %>
+
+    <div class="card-body">
+      <div class="btn-group">
+        <%= link_to "",  (post_path(post)), class: "nav-link commonNavIcon click-icon" %>
+        <% if post.user_id == current_user.id %>
+            <%= link_to post_path(post), method: :delete, class: "ml-auto mx-0 my-auto" do %>
+              <div class="delete-post-icon">
+              </div>
+            <% end %>
+          <% end %>
+      </div>
+      <%= link_to time_ago_in_words(post.created_at).upcase + "前", "#", class: "post-time no-text-decoration" %>
+    </div>
+  </div>
+<% end %>
+</div>

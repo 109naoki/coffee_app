@@ -3,5 +3,7 @@ class Post < ApplicationRecord
   belongs_to :user
 
   validates :image, presence: true
+  validates :caption, presence: true,length: { maximum: 30 }
+  validates :description, presence: true,length: { maximum: 15 }
 
 end
