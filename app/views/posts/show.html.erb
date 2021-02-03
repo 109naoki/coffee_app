@@ -1,10 +1,5 @@
-<div class="col-md-10 col-md-offset-1 mx-auto postShow-wrap">
-  <div class="row post-wrap">
-    <div class="col-md-8">
-      <div class="card-left">
 
-      </div>
-    </div>
+
     <div class="col-md-4">
       <div class="card-right">
         <div class="card-right-comment">
@@ -28,6 +23,21 @@
           </div>
         </div>
         <div class="row parts">
+           <%# ==========ここから追加する========== %>
+          <div id="like-icon-post-<%= @post.id.to_s %>">
+            <% if @post.liked_by(current_user).present? %>
+              <%= link_to "いいねを取り消す", post_like_path(@post.id, @post.liked_by(current_user)), method: :DELETE, remote: true, class: "loved hide-text" %>
+            <% else %>
+              <%= link_to "いいね", post_likes_path(@post), method: :POST, remote: true, class: "love hide-text" %>
+            <% end %>
+          </div>
+
+
+          </div>
+
+          <%# ==========ここから編集する========== %>
+          <div id="like-text-post-<%= @post.id.to_s %>">
+          <%= render "like_text", { likes: @post.likes } %>
         </div>
         <div class="post-time"><%= time_ago_in_words(@post.created_at).upcase %>前</div>
         <hr>

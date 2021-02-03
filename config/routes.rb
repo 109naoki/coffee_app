@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/posts/new', to: 'posts#new'
   post '/posts', to: 'posts#create'
   resources :users, only: [:show]
-  resources :posts, only: [:show,:destroy]
-
+  resources :posts, only: %i(show destroy) do
+  resources :likes, only: %i(create destroy)
+  end
 end
