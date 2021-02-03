@@ -5,6 +5,7 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
   has_many :posts, dependent: :destroy
   has_many :likes
+  has_many :comments
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,:omniauthable
   validates :name, presence: true
